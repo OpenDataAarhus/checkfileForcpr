@@ -223,7 +223,6 @@ def ckeckfileforcpr(newfile,extension):
             return "Kan ikke checke filetype."
     except os.error as ose:
 	logging.error(str(ose))
-        #send_mail("toan@aarhus.dk","os.error",str(ose))
 
 def process_pdf(path):
     """Extract text from PDF file using PDFMiner with whitespace inatact."""
