@@ -2,6 +2,7 @@ Setup checkfileForcpr (NY)
 -------------------------------------------------------------------------------
 
 postgres=# create database oddk_default;
+
 postgres=# CREATE TABLE ckanvalidators (
                id     text PRIMARY KEY,
                public boolean
