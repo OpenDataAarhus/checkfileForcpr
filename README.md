@@ -2,13 +2,18 @@ Setup checkfileForcpr (NY)
 -------------------------------------------------------------------------------
 
 postgres=# create database oddk_default;
+
 postgres=# CREATE TABLE ckanvalidators (
                id     text PRIMARY KEY,
                public boolean
            );
+           
 postgres=# grant insert on ckanvalidators to ckan_default;
+
 postgres=# grant update on ckanvalidators to ckan_default;
+
 postgres=# grant select on ckanvalidators to ckan_default;
+
 
 psycopg2 (http://initd.org/psycopg/docs/install.html#install-from-package)
 -----------------
