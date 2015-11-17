@@ -9,6 +9,7 @@ postgres=# CREATE TABLE ckanvalidators (
            );
            
 postgres=# grant insert on ckanvalidators to ckan_default;
+
 postgres=# grant update on ckanvalidators to ckan_default;
 postgres=# grant select on ckanvalidators to ckan_default;
 
