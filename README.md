@@ -2,10 +2,15 @@ Setup checkfileForcpr
 -------------------------------------------------------------------------------
 
 ...$ cd /usr/lib/ckan/default/src/ckan/
+
 ...$ . /usr/lib/ckan/default/bin/activate
+
 ...$ paster --plugin=ckan create -t ckanext ckanext-CKANValidator
+
 ...$ cd CKANValidator/
+
 ...$ python setup.py develop
+
 ...$ sudo nano /etc/ckan/default/production.ini
 	ckan.plugins = ... setstateforpendingvalidation
 	ckan.auth.create_unowned_dataset = False
