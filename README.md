@@ -1,6 +1,10 @@
 Setup checkfileForcpr
 -------------------------------------------------------------------------------
 ```
+  
+Make sure your virtualenv is activated.   
+  
+
 ...$ cd /usr/lib/ckan/default/src/ckan/  
 ...$ . /usr/lib/ckan/default/bin/activate  
 ...$ paster --plugin=ckan create -t ckanext ckanext-CKANValidator  
