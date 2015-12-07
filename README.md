@@ -1,6 +1,6 @@
 Setup checkfileForcpr
 -------------------------------------------------------------------------------
-
+```
 ...$ cd /usr/lib/ckan/default/src/ckan/  
 ...$ . /usr/lib/ckan/default/bin/activate  
 ...$ paster --plugin=ckan create -t ckanext ckanext-CKANValidator  
@@ -26,7 +26,7 @@ postgres=# grant insert on ckanvalidators to ckan_default;
   
 postgres=# grant update on ckanvalidators to ckan_default;  
 postgres=# grant select on ckanvalidators to ckan_default;  
-  
+```  
 psycopg2 (http://initd.org/psycopg/docs/install.html#install-from-package)  
 -----------------
 ...$ sudo apt-get update  
