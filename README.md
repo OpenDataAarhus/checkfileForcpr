@@ -15,7 +15,7 @@ Setup checkfileForcpr
 ...$ sudo service apache2 restart  
 ...$ paster sysadmin add CKANValidator -c /etc/ckan/default/production.ini  
   
-postgres=# create database oddk_default;  
+postgres=# create database odaa_default;  
   
 postgres=# CREATE TABLE ckanvalidators (  
                id     text PRIMARY KEY,  
