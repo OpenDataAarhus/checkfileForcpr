@@ -29,7 +29,7 @@ class SetStateForPendingValidationPlugin(plugins.SingletonPlugin):
             log.info("CKAN to send %r: ", data_dict)
             toolkit.get_action('package_update')(context, data_dict)
             try:
-                conn = psycopg2.connect("dbname='oddk_default' user='ckan_default' host='localhost' password='xo122R13?'")
+                conn = psycopg2.connect("dbname='oddk_default' user='ckan_default' host='localhost' password='xxxx'")
                 cur = conn.cursor()
                 sql="""
                     SELECT count(*) from CKANValidators where id='%s';
@@ -54,7 +54,7 @@ class SetStateForPendingValidationPlugin(plugins.SingletonPlugin):
                 log.info("psycopg2.DatabaseError:" + str(e))
         else:
             try:
-                conn = psycopg2.connect("dbname='oddk_default' user='ckan_default' host='localhost' password='xo122R13?'")
+                conn = psycopg2.connect("dbname='oddk_default' user='ckan_default' host='localhost' password='xxxx'")
                 cur = conn.cursor()
                 sql="""
                     SELECT count(*) from CKANValidators where id='%s';
