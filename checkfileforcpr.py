@@ -62,12 +62,16 @@ def changePackage(id):
     connectString = """dbname='oddk_default' user='ckan_default' host='localhost' password='%s'""" % g_password
     conn = psycopg2.connect(connectString)
     cur = conn.cursor()
+    #CKANValidators is set in plugin.py.
+    #public=true if the user has set the dataset to private.
+    #If the user has set the private to true, then do not chech this dataset.
     sql="""
     SELECT count(*) from CKANValidators where id='%s' and public=true;
     """ % id
     cur.execute(sql)
     rows = cur.fetchall()
-    if rows[0][0]>0:        
+    if rows[0][0]>0:     
+    	#Jump out if the dataset is set to private by user,
 	return
 
     dataset_dict = {
