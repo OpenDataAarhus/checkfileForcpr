@@ -32,6 +32,7 @@ class SetStateForPendingValidationPlugin(plugins.SingletonPlugin):
             try:
                #If private=false when set public to false in CKANValidators.
                #This will be used in checkfileforspr.py to check if the user has entered private to true.
+               #If the dataset is set to private by CKANValidator, so set public to false in CKANValidators.
                 conn = psycopg2.connect("dbname='oddk_default' user='ckan_default' host='localhost' password='xxxx'")
                 cur = conn.cursor()
                 sql="""
