@@ -30,7 +30,7 @@ class SetStateForPendingValidationPlugin(plugins.SingletonPlugin):
             toolkit.get_action('package_update')(context, data_dict)
             try:
                #If private=false when set public to false in CKANValidators.
-               #This will be used in checkfileforspr.py to check if the user has entered private two true.
+               #This will be used in checkfileforspr.py to check if the user has entered private to true.
                 conn = psycopg2.connect("dbname='oddk_default' user='ckan_default' host='localhost' password='xxxx'")
                 cur = conn.cursor()
                 sql="""
@@ -38,7 +38,7 @@ class SetStateForPendingValidationPlugin(plugins.SingletonPlugin):
                 """ % data_dict['id']
                 cur.execute(sql)
                 rows = cur.fetchall()
-                if rows[0][0]>0:                         
+               if rows[0][0]>0:                         
                       sql="""
                       UPDATE CKANValidators
                       SET public=false
@@ -46,7 +46,7 @@ class SetStateForPendingValidationPlugin(plugins.SingletonPlugin):
                       """ % data_dict['id']
                       cur.execute(sql)
                       conn.commit()
-                else:              
+               else:              
                       sql="""
                       INSERT INTO CKANValidators VALUES('%s',false)
                       """ % data_dict['id']
