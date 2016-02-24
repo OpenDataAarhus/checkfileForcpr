@@ -19,6 +19,7 @@ class SetStateForPendingValidationPlugin(plugins.SingletonPlugin):
     userAllowedToPublish = config.get('ckan.setstateforpendingvalidation.user')
     if userAllowedToPublish == context['user']:
         log.info("User is allowed to publish dataset")
+        #If the user is the user that is in the ckan.setstateforpendingvalidation.user (CKAN ini file) then nothing is done.
         return
 
     # Only do this for active datasets, and not ones in draft or deleted state
