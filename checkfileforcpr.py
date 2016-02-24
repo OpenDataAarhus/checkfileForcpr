@@ -417,7 +417,7 @@ def checkForCPR():
     con = psycopg2.connect(connectString)
     cur = con.cursor()
 
-	#Find all the dataset which is private.
+	#Find all dataset thats are private.
     cur.execute("""SELECT DISTINCT R.ID,P.ID,P.private,R.url,PU.fullname,PU.email,P.name
                 FROM Package P
                 JOIN Package_Revision PR ON P.ID = PR.ID  
